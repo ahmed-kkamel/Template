@@ -1,0 +1,112 @@
+/* Start global rules  */
+:root {
+	--main-color: #2196f3;
+	--main-color-alt: #1781e0;
+	--header-height: 73.6px;
+	--main-transition: 0.3s;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* padding: 0;
+	margin: 0; */
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Cairo", sans-serif;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+/* initialize the container  */
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Responsive container */
+
+/* Small screans */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+	/* Midium screans */
+	@media (min-width: 992px) {
+		.container {
+			width: 970px;
+		}
+	}
+	/* Larg screans */
+	@media (min-width: 1200px) {
+		.container {
+			width: 1170px;
+		}
+	}
+}
+/* End global rules  */
+/* Start header */
+.header {
+	background-color: white;
+	-webkit-box-shadow: 0 0 10px #ddd;
+	-moz-box-shadow: 0 0 10px #ddd;
+	box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+.header .logo {
+	color: var(--main-color);
+	font-size: 26px;
+	font-weight: bold;
+	height: var(--header-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header .main-nav {
+	display: flex;
+}
+.header .main-nav > li > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: var(--header-height);
+	padding: 0 30px;
+	color: black;
+	position: relative;
+	transition: var(--main-transition);
+	overflow: hidden;
+}
+.header .main-nav > li > a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: var(--main-color);
+	top: 0;
+	left: -100%;
+	transition: var(--main-transition);
+}
+.header .main-nav > li > a:hover {
+	color: var(--main-color);
+	background-color: #fafafa;
+}
+.header .main-nav > li > a:hover::before {
+	left: 0;
+}
+/* end header */
